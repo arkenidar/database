@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+require_relative '../lib/blog/db'
+require 'irb'
+
+Blog.setup_database!
+Blog.load_models!
+
+puts "Blog Console - Models loaded: Author, Post, Comment"
+puts "Example: Author.all, Post.published, Comment.first"
+puts ""
+
+IRB.start

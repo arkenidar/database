@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+require_relative '../lib/blog/db'
+
+Blog.setup_database!
+Blog.load_models!
+
+require_relative '../app/api'
+
+puts "Starting Blog API server on http://localhost:4567"
+BlogAPI.run! port: 4567
