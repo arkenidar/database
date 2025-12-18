@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="konsole" type="RubyRemoteDebugConfigurationType" factoryName="Ruby remote debug">
+    <RUBY_REMOTE_DEBUG_CONFIG NAME="REMOTE_HOST" VALUE="localhost" />
+    <RUBY_REMOTE_DEBUG_CONFIG NAME="PORT" VALUE="8800" />
+    <RUBY_REMOTE_DEBUG_CONFIG NAME="DISPATCHER_PORT" VALUE="9900" />
+    <RUBY_REMOTE_DEBUG_CONFIG NAME="REMOTE_ROOT" VALUE="$PROJECT_DIR$/" />
+    <RUBY_REMOTE_DEBUG_CONFIG NAME="LOCAL_ROOT" VALUE="$PROJECT_DIR$/" />
+    <method v="2">
+      <option name="ToolBeforeRunTask" enabled="true" actionId="Tool_External Tools_konsole-tool-TUI" />
+    </method>
+  </configuration>
+</component>
