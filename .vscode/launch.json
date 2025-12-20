@@ -9,7 +9,8 @@
             "name": "Attach debugger",
             "request": "attach",
             "debugPort": 12345,
-            "localfs": true
+            "localfs": true,
+            //"preLaunchTask": "bin\\tui_debug.bash"
         },
         {
             "type": "ruby_lsp",
