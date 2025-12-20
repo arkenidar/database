@@ -41,3 +41,6 @@ Thumbs.db
 
 # Gemfile.lock (uncomment if you want to track it)
 # Gemfile.lock
+Gemfile.lock
+db/blog.sqlite3-shm
+db/blog.sqlite3-wal
