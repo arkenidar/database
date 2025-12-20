@@ -30,7 +30,7 @@
 *.swp
 *.swo
 *~
-.vscode/
+### .vscode/
 
 # OS
 .DS_Store

@@ -1,0 +1,49 @@
+
+rdbg --open --port 12345 -- bin/rails server
+
+Or for a plain Ruby script:
+
+rdbg --open --port 12345 -- ruby my_script.rb
+
+--open → allows remote debugger connections
+--port 12345 → choose any free port
+
+3. Configure VS Code to Attach
+
+In VS Code, open .vscode/launch.json (create it if it doesn’t exist) and add:
+
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Attach to Ruby Process",
+      "type": "rdbg",
+      "request": "attach",
+      "debugPort": 12345,
+      "localfs": true
+    }
+  ]
+}
+
+4. Attach the Debugger
+
+In VS Code, go to Run and Debug (Ctrl+Shift+D / Cmd+Shift+D).
+Select Attach to Ruby Process from the dropdown.
+Click the green ▶ button.
+
+5. Debug Normally
+
+Set breakpoints in your Ruby files.
+Use the Debug Console to inspect variables.
+Step through code as usual.
+
+✅ Tip:
+If you’re using Ruby LSP in VS Code, it already integrates with the debug gem, so you don’t need extra extensions like VSCode Ruby Debugger — just ensure "type": "rdbg" is used in launch.json.
+
+If you want, I can give you a ready-to-use Rails + Ruby LSP debug setup so you can start and attach in one click.
+Do you want me to prepare that?
+
+
+
+
+
