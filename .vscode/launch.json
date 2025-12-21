@@ -5,6 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "bin/server script",
+            "request": "launch",
+            "type": "ruby_lsp",
+            "program": "ruby bin/server"
+        },
+        {
             "type": "ruby_lsp",
             "name": "Attach debugger",
             "request": "attach",
