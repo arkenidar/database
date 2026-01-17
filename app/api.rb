@@ -5,8 +5,14 @@ require 'json'
 class BlogAPI < Sinatra::Base
   helpers Sinatra::JSON
 
+  # Default hosts for local development; override via PERMITTED_HOSTS env var
+  DEFAULT_PERMITTED_HOSTS = %w[127.0.0.1 localhost].freeze
+
   configure do
     set :show_exceptions, false
+    # Allow reverse proxy hosts (comma-separated in ENV, or use defaults)
+    hosts = ENV.fetch('PERMITTED_HOSTS', DEFAULT_PERMITTED_HOSTS.join(',')).split(',').map(&:strip)
+    set :host_authorization, permitted_hosts: hosts
   end
 
   before do
